@@ -1,0 +1,8 @@
+{
+  "name": "Bridals Heaven Salon",
+  "description": "Where Beauty Meets Perfection. Discover professional bridal, party makeup, hair styling, hydra facials, laser hair removal, and custom mehndi designs in Toba Tek Singh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

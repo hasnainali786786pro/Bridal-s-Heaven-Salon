@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+  --font-serif: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+  --font-mono: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+
+  /* Redefining color palettes globally for Natural Tones */
+  --color-slate-50: #FFF9F9;    /* Creamy warm off-whitish blush background */
+  --color-slate-100: #FFF1F2;   /* Soft warm blushing partition lines */
+  --color-slate-200: #FFE1E6;   /* Blushing pink-infused light borders */
+  --color-slate-300: #FBCFE8;   /* Pink secondary border highlight */
+  --color-slate-400: #F472B6;   /* Midtone pink indicator */
+  --color-slate-500: #9D174D;   /* Secondary deep pink */
+  --color-slate-600: #831843;   /* Rich warm dark rose */
+  --color-slate-700: #500724;   /* Deep burgundy */
+  --color-slate-800: #3F0219;   /* Very deep burgundy */
+  --color-slate-900: #330113;   /* Dominate luxurious deep berry dark */
+
+  /* Override standard Rose shades with Natural Pinkish Tones */
+  --color-rose-50: #FFF5F6;
+  --color-rose-100: #FFE4E9;
+  --color-rose-200: #FBCFE8;
+  --color-rose-350: #F472B6;
+  --color-rose-500: #DB2777;
+  --color-rose-600: #E11D48;
+  --color-rose-700: #BE185D;
+  --color-rose-800: #9D174D;
+  --color-rose-900: #831843;
+  --color-rose-950: #500724;
+}
+
+/* Custom gorgeous animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+@keyframes bounce-gentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 2.5s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce 3s infinite;
+}
+
+/* Tailwind fade integration backup for custom elements */
+.animate-in {
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+.fade-in {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Specific overrides for hardcoded brand palette values to align with Natural Tones */
+.text-\[\#7a1c43\] {
+  color: #BE185D !important; /* Elegant mid pink-600 */
+}
+.bg-\[\#7a1c43\] {
+  background-color: #BE185D !important;
+}
+.hover\:bg-\[\#7a1c43\]:hover {
+  background-color: #9D174D !important;
+}
+.hover\:text-\[\#7a1c43\]:hover {
+  color: #BE185D !important;
+}
+.border-\[\#7a1c43\] {
+  border-color: #BE185D !important;
+}
+.ring-\[\#7a1c43\] {
+  --tw-ring-color: #BE185D !important;
+}
+.bg-\[\#7a1c43\]\/5 {
+  background-color: rgba(190, 24, 93, 0.05) !important;
+}
+.bg-\[\#7a1c43\]\/10 {
+  background-color: rgba(190, 24, 93, 0.1) !important;
+}
+.text-\[\#58102d\] {
+  color: #831843 !important; /* Rich deep berry dark */
+}
+.bg-\[\#58102d\] {
+  background-color: #831843 !important;
+}
+.bg-\[\#58102d\]\/20 {
+  background-color: rgba(131, 24, 67, 0.2) !important;
+}
+
+/* Seamless glassmorphism body adjustments to match design specs */
+body {
+  background-color: #FFF9F9 !important;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+}
+
+/* Ensure nice smooth scroll */
+html {
+  scroll-behavior: smooth;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+}
+
+/* Global Arial font override for all content elements to ensure pixel-perfect Arial style across the entire website */
+body, button, input, select, textarea, div, p, span, h1, h2, h3, h4, h5, h6, a, li, ul, ol, section, main, header, footer {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* GLOBAL PREMIUM BLUE HOVER OVERRIDES                                        */
+/* Make all buttons, links, and CTAs turn to premium blue colors on hover     */
+/* -------------------------------------------------------------------------- */
+
+/* Enable fast but smooth transition adjustments on interactive elements */
+button,
+a,
+[role="button"] {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* 1) Filled Buttons & CTAs: Turn into solid deep cobalt blue with white text and matching glow */
+button:hover:not(.text-slate-500):not(.text-slate-600):not(.text-slate-400):not(.text-slate-300),
+a[href]:not([href^="tel"]):hover,
+[role="button"]:hover,
+.bg-gradient-to-r:hover,
+.hover\:bg-\[\#7a1c43\]:hover,
+.bg-emerald-600:hover,
+.bg-amber-600:hover,
+.bg-[#58102d]:hover,
+.bg-slate-900:hover,
+button.bg-pink-600:hover,
+button.bg-neutral-900:hover {
+  background-color: #1d4ed8 !important; /* Premium Cobalt Blue */
+  background-image: none !important; /* Remove gradient headers so they turn full blue */
+  color: #ffffff !important; /* Pure white text contrast */
+  border-color: #1d4ed8 !important;
+  box-shadow: 0 6px 16px rgba(29, 78, 216, 0.35) !important; /* Elegant modern glow shadow */
+}
+
+/* 2) Outline / Bordered Buttons: Convert to solid blue background with white text on hover */
+a[href^="tel"]:hover,
+.border-rose-200:hover,
+button.border:hover {
+  background-color: #1d4ed8 !important;
+  color: #ffffff !important;
+  border-color: #1d4ed8 !important;
+}
+
+/* Keep icon elements inside of hovered buttons colored bright white for perfect readability */
+button:hover svg,
+a:hover svg,
+[role="button"]:hover svg {
+  color: #ffffff !important;
+}
+
+/* 3) Text buttons and plain navigation items: change hover text safely to a rich sapphire blue */
+button.text-slate-500:hover,
+button.text-slate-600:hover,
+button.text-slate-400:hover,
+button.text-slate-300:hover,
+.hover\:text-\[\#7a1c43\]:hover {
+  color: #2563eb !important; /* Premium Sapphire Blue */
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
