@@ -129,21 +129,41 @@ body, button, input, select, textarea, div, p, span, h1, h2, h3, h4, h5, h6, a, 
 }
 
 /* -------------------------------------------------------------------------- */
-/* GLOBAL PREMIUM BLUE HOVER OVERRIDES                                        */
-/* Make all buttons, links, and CTAs turn to premium blue colors on hover     */
+/* GLOBAL PREMIUM RED THEME FOR ALL BUTTONS & INTERACTIVE ELEMENTS             */
+/* Make all buttons, links, and CTAs turn to premium luxury red, both in normal and hover states */
 /* -------------------------------------------------------------------------- */
 
 /* Enable fast but smooth transition adjustments on interactive elements */
 button,
 a,
 [role="button"] {
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-/* 1) Filled Buttons & CTAs: Turn into solid deep cobalt blue with white text and matching glow */
-button:hover:not(.text-slate-500):not(.text-slate-600):not(.text-slate-400):not(.text-slate-300),
-a[href]:not([href^="tel"]):hover,
-[role="button"]:hover,
+/* 1) Default State for Filled Buttons: Make them a gorgeous, luxury crimson/rose red with white text */
+button:not(.text-slate-500):not(.text-slate-600):not(.text-slate-400):not(.text-slate-300):not(.hover\:text-amber-300),
+a[href]:not([href^="tel"]):not(.hover\:text-amber-300):not(.font-bold),
+[role="button"]:not(.text-slate-400),
+.bg-gradient-to-r,
+.bg-rose-50,
+.bg-emerald-600,
+.bg-amber-600,
+.bg-[#58102d],
+.bg-slate-900,
+button.bg-pink-600,
+button.bg-neutral-900,
+button.bg-slate-900 {
+  background-color: #be123c !important; /* Premium Luxury Ruby Crimson Red (#be123c) */
+  background-image: none !important; /* Override slate or emerald gradients */
+  color: #ffffff !important; /* Crisp white contrast */
+  border-color: #be123c !important;
+  box-shadow: 0 4px 12px rgba(190, 18, 60, 0.15) !important;
+}
+
+/* 2) Hover State for Filled Buttons & CTAs: Turn into solid hot vibrant scarlet red with elegant glow */
+button:hover:not(.text-slate-500):not(.text-slate-600):not(.text-slate-400):not(.text-slate-300):not(.hover\:text-amber-300),
+a[href]:not([href^="tel"]):not(.hover\:text-amber-300):not(.font-bold):hover,
+[role="button"]:not(.text-slate-400):hover,
 .bg-gradient-to-r:hover,
 .hover\:bg-\[\#7a1c43\]:hover,
 .bg-emerald-600:hover,
@@ -152,20 +172,29 @@ a[href]:not([href^="tel"]):hover,
 .bg-slate-900:hover,
 button.bg-pink-600:hover,
 button.bg-neutral-900:hover {
-  background-color: #1d4ed8 !important; /* Premium Cobalt Blue */
-  background-image: none !important; /* Remove gradient headers so they turn full blue */
-  color: #ffffff !important; /* Pure white text contrast */
-  border-color: #1d4ed8 !important;
-  box-shadow: 0 6px 16px rgba(29, 78, 216, 0.35) !important; /* Elegant modern glow shadow */
+  background-color: #e11d48 !important; /* Vibrant Scarlet Red */
+  background-image: none !important;
+  color: #ffffff !important;
+  border-color: #e11d48 !important;
+  box-shadow: 0 6px 20px rgba(225, 29, 72, 0.45) !important; /* Elegant hot red glow */
 }
 
-/* 2) Outline / Bordered Buttons: Convert to solid blue background with white text on hover */
+/* 3) Default State for Outline / Bordered Buttons: Convert to red borders and red text */
+a[href^="tel"],
+.border-rose-200,
+button.border {
+  border-color: #be123c !important;
+  color: #be123c !important;
+}
+
+/* 4) Hover State for Outline / Bordered Buttons: Convert to solid red background with white text on hover */
 a[href^="tel"]:hover,
 .border-rose-200:hover,
 button.border:hover {
-  background-color: #1d4ed8 !important;
+  background-color: #e11d48 !important;
   color: #ffffff !important;
-  border-color: #1d4ed8 !important;
+  border-color: #e11d48 !important;
+  box-shadow: 0 6px 16px rgba(225, 29, 72, 0.3) !important;
 }
 
 /* Keep icon elements inside of hovered buttons colored bright white for perfect readability */
@@ -175,13 +204,14 @@ a:hover svg,
   color: #ffffff !important;
 }
 
-/* 3) Text buttons and plain navigation items: change hover text safely to a rich sapphire blue */
+/* 5) Text buttons and plain navigation items: default & hover safely to rich deep rose/red */
 button.text-slate-500:hover,
 button.text-slate-600:hover,
 button.text-slate-400:hover,
 button.text-slate-300:hover,
-.hover\:text-\[\#7a1c43\]:hover {
-  color: #2563eb !important; /* Premium Sapphire Blue */
+.hover\:text-\[\#7a1c43\]:hover,
+.hover\:text-amber-300:hover {
+  color: #e11d48 !important; /* Premium Ruby Hover Red */
   background-color: transparent !important;
   border-color: transparent !important;
   box-shadow: none !important;
