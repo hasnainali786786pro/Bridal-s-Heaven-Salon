@@ -19,12 +19,12 @@ export default function Hero({ onOpenBooking, onNavigateToServices }: HeroProps)
       {/* Immersive background photo layout overlaid with a luxury deep-rose gradient */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=1920&q=80"
+          src="https://www.shutterstock.com/image-photo/frontal-backdrop-creatively-designed-beauty-260nw-2537801015.jpg"
           alt="Premium luxury bridal look"
-          className="w-full h-full object-cover object-center opacity-45 scale-105 select-none pointer-events-none"
+          className="w-full h-full object-cover object-center opacity-55 scale-100 select-none pointer-events-none"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-[#2f0717]/85 to-slate-950/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-[#380718]/70" />
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-950 to-transparent" />
       </div>
 
